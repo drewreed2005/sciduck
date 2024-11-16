@@ -1,0 +1,18 @@
+TITLE The "Big Back Tunnel"
+DESCRIPTION
+Despite the somewhat playful name, the "tunnel" is really
+a brutalist, concrete stairwell. Unlike the main stairwell,
+exposed red pipes are a frequent sight and changes in
+direction are constant obstacle. Even so, the tunnel is
+beloved—such is the consequence of bringing college
+students straight to a convenient source of food.
+
+You can go down and exit the stairwell, leading to the area
+right outside the dining hall, but you can't re-enter the
+"Big Back Tunnel" from the bottom. If that doesn't sound
+promising, you can still go back to the common room.
+END DESCRIPTION
+COMMANDS
+GO DOWN,GO DOWN BIG BACK TUNNEL,GO DOWN "BIG BACK TUNNEL",GO DOWN THE BIG BACK TUNNEL,GO DOWN THE "BIG BACK TUNNEL",GO DOWN THE STAIRWELL,GO DOWN THE STAIRS,EXIT,EXIT BIG BACK TUNNEL,EXIT "BIG BACK TUNNEL",EXIT THE BIG BACK TUNNEL,EXIT THE "BIG BACK TUNNEL",GO DOWN AND EXIT,GO DOWN AND EXIT BIG BACK TUNNEL,GO DOWN AND EXIT "BIG BACK TUNNEL",GO DOWN AND EXIT THE BIG BACK TUNNEL,GO DOWN AND EXIT THE "BIG BACK TUNNEL",GO TO OUTSIDE,GO TO OUTSIDE THE DINING HALL,GO TO OUTSIDE OF THE DINING HALL,GO TO THE OUTSIDE OF THE DINING HALL,GO OUTSIDE,GO OUTSIDE DINING HALL,GO OUTSIDE THE DINING HALL,GO OUTSIDE OF THE DINING HALL,GO TO OUTSIDE THE DINING HALL,GO TO THE OUTSIDE OF THE DINING HALL:big_back_tunnel
+COMMON ROOM,THE COMMON ROOM,GO TO COMMON ROOM,GO TO THE COMMON ROOM,ENTER COMMON ROOM,ENTER THE COMMON ROOM,BACK,BACK TO COMMON ROOM,BACK TO THE COMMON ROOM,GO BACK,GO BACK TO COMMON ROOM,GO BACK TO THE COMMON ROOM,RETURN,RETURN TO COMMON ROOM,RETURN TO THE COMMON ROOM:start
+END COMMANDS
