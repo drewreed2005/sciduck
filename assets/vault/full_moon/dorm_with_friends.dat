@@ -1,0 +1,21 @@
+TITLE Your Dorm
+DESCRIPTION
+You knock on your door, and one of the two roommates who
+sat inside lets you in. He's happy to see that you came
+with the group, and so is your other roommate.
+
+The group of friends comments on the decorations on the
+walls, the big new music posters, and the photo wall on
+your roommate's closet that continues to grow. One of
+your friends comments on the blinds being closed: "Why
+keep them closed? I bet the view's great."
+
+Now that your friends have spent some time in your
+room, they seem to be getting antsy. "The lunar event
+is happening," one mentions again. You can choose to
+return to the common room if you want.
+END DESCRIPTION
+COMMANDS
+BLINDS,OPEN BLINDS,OPEN THE BLINDS,OPEN CURTAINS,OPEN THE CURTAINS,UNCOVER,UNCOVER THE WINDOW,LOOK AT WINDOW,LOOK OUT WINDOW,LOOK OUT THE WINDOW:dorm_window
+COMMON ROOM,THE COMMON ROOM,GO TO COMMON ROOM,GO TO THE COMMON ROOM,ENTER COMMON ROOM,ENTER THE COMMON ROOM,BACK,GO BACK,GO BACK TO COMMON ROOM,GO BACK TO THE COMMON ROOM,RETURN,RETURN TO COMMON ROOM,RETURN TO THE COMMON ROOM:start
+END COMMANDS

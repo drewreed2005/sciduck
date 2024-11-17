@@ -1,0 +1,17 @@
+TITLE Elevator (Floor 3)
+DESCRIPTION
+You stand alone in the elevator. The smooth, reflective,
+metal-textured elevator walls make you feel as if you
+have stepped into the future. The panel of buttons is
+covered with caution tape—it seems that the elevator is
+out of order, but they haven't yet covered the exterior
+with tape.
+
+None of the buttons work; the elevator is completely
+dysfunctional. It seems you'll be stuck until someone
+comes to help you. You are left alone, sitting in the
+claustrophobic elevator.
+END DESCRIPTION
+COMMANDS
+END COMMANDS
+GAME OVER

@@ -1,0 +1,15 @@
+TITLE Common Room (Floor 3)
+DESCRIPTION
+Upon reviewing your options with the friends who have
+joined you, it seems the "Big Back Tunnel" is no longer
+an option; they said they "aren't hungry."
+
+"What we crave," according to the tallest of the friend
+group, "is a lunar sighting." Once again, someone
+mentions a "beaver."
+END DESCRIPTION
+COMMANDS
+DORM,THE DORM,DORM ROOM,THE DORM ROOM,GO TO DORM,GO TO THE DORM,GO TO DORM ROOM,GO TO THE DORM ROOM,ENTER DORM,ENTER THE DORM,ENTER DORM ROOM,ENTER THE DORM ROOM:dorm_with_friends
+STAIRWELL,THE STAIRWELL,MAIN STAIRWELL,THE MAIN STAIRWELL,GO TO STAIRWELL,GO TO THE STAIRWELL,GO TO MAIN STAIRWELL,GO TO THE MAIN STAIRWELL,ENTER STAIRWELL,ENTER THE STAIRWELL,ENTER MAIN STAIRWELL,ENTER THE MAIN STAIRWELL:main_stairwell
+ELEVATOR,THE ELEVATOR,GO TO ELEVATOR,GO TO THE ELEVATOR,ENTER ELEVATOR,ENTER THE ELEVATOR:elevator_with_friends
+END COMMANDS

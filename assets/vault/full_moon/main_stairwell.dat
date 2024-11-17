@@ -1,0 +1,25 @@
+TITLE Main Stairwell (Floor 3)
+DESCRIPTION
+You enter the stairwell, and along come some of your
+friends from the common room. They softly muse and
+ponder amongst themselves—you hear one mention a
+"beaver," but not in any particular context. One or two
+of them cough for a moment before catching their breath.
+
+The stairwell itself is nothing special: dull, tan-white
+walls and concrete steps with non-slip edge texturing.
+There is some odd number of steps in the first set and
+and even number down the second. Any further is anyone's
+guess for now.
+
+Before heading down the stairs, you can choose to return
+to the common room. If you go down, you may not be able
+to come back; it seems you don't have a keycard to
+independently open the stairway door, and neither does
+anyone around you. If you are confident, you can head
+down the stairs.
+END DESCRIPTION
+COMMANDS
+D,DOWN,GO DOWN,GO DOWN STAIRS,GO DOWN THE STAIRS,GO DOWN STAIRWELL,GO DOWN THE STAIRWELL,GO DOWN MAIN STAIRWELL,GO DOWN THE MAIN STAIRWELL:main_stairwell_floor_2
+COMMON ROOM,THE COMMON ROOM,GO TO COMMON ROOM,GO TO THE COMMON ROOM,ENTER COMMON ROOM,ENTER THE COMMON ROOM,BACK,GO BACK,GO BACK TO COMMON ROOM,GO BACK TO THE COMMON ROOM,RETURN,RETURN TO COMMON ROOM,RETURN TO THE COMMON ROOM:common_room
+END COMMANDS

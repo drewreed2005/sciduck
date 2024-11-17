@@ -1,0 +1,14 @@
+TITLE Student Housing (Floor 1)
+DESCRIPTION
+Down the stairs is the first floor of the student
+housing building. Some new familiar faces—friends from
+your classes and your clubs—join you and your third-
+floor friends on your trip.
+
+Nobody wants to go back up the stairs, since you can't
+get back to your floor anyway, so your only option is
+to go outside.
+END DESCRIPTION
+COMMANDS
+OUTSIDE,GO OUTSIDE,GO TO OUTSIDE,GO TO THE OUTSIDE,EXIT,EXIT STUDENT HOUSING,EXIT STUDENT HOUSING FLOOR 1,EXIT STUDENT HOUSING FLOOR ONE,EXIT STUDENT HOUSING BUILDING,EXIT THE STUDENT HOUSING BUILDING:outside_housing_entrance
+END COMMANDS

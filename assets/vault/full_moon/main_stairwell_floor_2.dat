@@ -1,0 +1,18 @@
+TITLE Main Stairwell (Floor 2)
+DESCRIPTION
+You and your friends from the third floor head down the
+stairs, closing the door behind you. After making your
+way down two strips of stairs, you find yourself before
+two doors. The one directly in front of you, which is
+marked by a sign reading "★2", seems to lead outside.
+The door to your right has more stairs just beyond
+it.
+
+So, you can go forward through the "★2" door to the
+outside, or you can go through the right door and
+descend even more stairs.
+END DESCRIPTION
+COMMANDS
+F,FORWARD,GO FORWARD,OUTSIDE,GO OUTSIDE,GO TO THE OUTSIDE,FORWARD DOOR,GO THROUGH FORWARD DOOR,GO THROUGH THE FORWARD DOOR,GO INTO FORWARD DOOR,GO INTO THE FORWARD DOOR,ENTER OUTSIDE,ENTER FORWARD DOOR,ENTER THE FORWARD DOOR:outside_floor_2
+R,RIGHT,GO RIGHT,GO TO THE RIGHT,RIGHT DOOR,GO THROUGH RIGHT DOOR,GO THROUGH THE RIGHT DOOR,GO INTO RIGHT DOOR,GO INTO THE RIGHT DOOR,ENTER RIGHT DOOR,ENTER THE RIGHT DOOR,STAIRS,GO TO STAIRS,GO TO THE STAIRS,GO RIGHT TO STAIRS,GO RIGHT TO THE STAIRS,GO DOWN STAIRS,GO DOWN THE STAIRS,GO DOWN,DOWN,D:student_housing_floor_1
+END COMMANDS
