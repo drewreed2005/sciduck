@@ -7,6 +7,7 @@ description: Play it until you win.
 courses: { }
 ---
 
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@ courses: { }
 <style>
   body {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     background-color: #fafafa;
@@ -40,6 +42,7 @@ courses: { }
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
     border-radius: 8px;
+    aspect-ratio: 1 / 1; /* keeps square shape */
   }
 
   .cell:hover {
@@ -58,20 +61,39 @@ courses: { }
     font-size: 1.2em;
     color: #333;
   }
+
+  #reset-btn {
+    margin-top: 0.8em;
+    padding: 0.6em 1.4em;
+    background: #4b8bf4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: none;
+  }
+
+  #reset-btn:hover {
+    background: #3a77e0;
+    transform: scale(1.05);
+  }
 </style>
 </head>
 <body>
-  <div>
-    <div id="game"></div>
-    <div id="message"></div>
-  </div>
+  <div id="game"></div>
+  <div id="message"></div>
+  <button id="reset-btn" onclick="startGame()">Play Again</button>
 
 <script>
 const gameContainer = document.getElementById("game");
 const message = document.getElementById("message");
+const resetBtn = document.getElementById("reset-btn");
+
 let board = Array(9).fill(null);
 let player = "O"; // human
-let ai = "X"; // computer
+let ai = "X";     // computer
 
 const winPatterns = [
   [0,1,2],[3,4,5],[6,7,8],
@@ -175,14 +197,19 @@ function endGame(winner) {
   // Disable further moves
   const cells = document.querySelectorAll(".cell");
   cells.forEach(c => c.classList.add("taken"));
+
+  // Show reset button
+  resetBtn.style.display = "inline-block";
 }
 
 function startGame() {
   board = Array(9).fill(null);
   message.textContent = "";
+  resetBtn.style.display = "none";
   renderBoard();
-  // AI starts with best move
-  let startMoves = [0, 2, 4, 6, 8]; // corners and center
+
+  // AI starts with best move (corner or center)
+  let startMoves = [0, 2, 4, 6, 8];
   board[startMoves[Math.floor(Math.random() * startMoves.length)]] = ai;
   renderBoard();
 }
