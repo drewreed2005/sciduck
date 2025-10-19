@@ -8,6 +8,7 @@ courses: { }
 ---
 
 
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,12 +129,16 @@ function playerMove(i) {
   if (board[i] || checkWinner(board)) return;
   board[i] = player;
   renderBoard();
+
   let result = checkWinner(board);
   if (result) return endGame(result);
+
   aiMove();
 }
 
 function aiMove() {
+  if (checkWinner(board)) return;
+
   // Try to win
   for (let i = 0; i < 9; i++) {
     if (!board[i]) {
@@ -153,6 +158,8 @@ function aiMove() {
       if (checkWinner(board) === player) {
         board[i] = ai;
         renderBoard();
+        let result = checkWinner(board);
+        if (result) return endGame(result);
         return;
       }
       board[i] = null;
@@ -163,6 +170,8 @@ function aiMove() {
   if (!board[4]) {
     board[4] = ai;
     renderBoard();
+    let result = checkWinner(board);
+    if (result) endGame(result);
     return;
   }
 
@@ -171,6 +180,8 @@ function aiMove() {
     if (!board[i]) {
       board[i] = ai;
       renderBoard();
+      let result = checkWinner(board);
+      if (result) endGame(result);
       return;
     }
   }
@@ -180,6 +191,8 @@ function aiMove() {
     if (!board[i]) {
       board[i] = ai;
       renderBoard();
+      let result = checkWinner(board);
+      if (result) endGame(result);
       return;
     }
   }
