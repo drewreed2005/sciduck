@@ -202,9 +202,9 @@ function endGame(winner) {
   if (winner === "draw") {
     message.textContent = "It's a draw!";
   } else if (winner === ai) {
-    message.textContent = "AI wins!";
+    message.textContent = "Drew's wonderful AI wins!";
   } else {
-    message.textContent = "You win!";
+    message.textContent = "You win???";
   }
 
   // Disable further moves
