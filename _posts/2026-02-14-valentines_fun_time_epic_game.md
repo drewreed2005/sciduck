@@ -6,6 +6,7 @@ title: Saoirse's "Card" Game
 description: Smokestack smokestack smokestack
 courses: { }
 permalink: /saoirse-valentine-2026
+hide: true
 ---
 
 Epic thing goes here 😼
