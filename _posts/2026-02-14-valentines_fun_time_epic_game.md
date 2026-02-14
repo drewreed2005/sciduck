@@ -10,3 +10,7 @@ hide: true
 ---
 
 Epic thing goes here 😼
+
+<script>
+window.location.href = "https://drewreed2005.github.io/sciduck/game/index.html";
+</script>
