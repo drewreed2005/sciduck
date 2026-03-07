@@ -1,0 +1,353 @@
+/* declaring global variables */
+:root {
+    /* text variables */
+    --base-font-family: "New Tegomin", serif;
+    --base-font-size: clamp(1rem, 1.5vw, 2vw);
+
+    --outline-size: 0.035em;
+    --outline-color: white;
+    --text-outline:
+        calc(-1 * var(--outline-size)) calc(-1 * var(--outline-size)) 0 var(--outline-color),
+         var(--outline-size) calc(-1 * var(--outline-size)) 0 var(--outline-color),
+        calc(-1 * var(--outline-size))  var(--outline-size) 0 var(--outline-color),
+         var(--outline-size)  var(--outline-size) 0 var(--outline-color),
+        calc(-1 * var(--outline-size)) 0 0 var(--outline-color),
+         var(--outline-size) 0 0 var(--outline-color),
+         0 calc(-1 * var(--outline-size)) 0 var(--outline-color),
+         0 var(--outline-size) 0 var(--outline-color);
+
+    --label-left-font-size: 3.2vw;
+    --label-right-font-size: 2vw;
+    --label-color: white;
+    --label-outline-size: 0.06em;
+    --label-outline-color: black;
+    --label-text-outline:
+        calc(-1 * var(--label-outline-size)) calc(-1 * var(--label-outline-size)) 0 var(--label-outline-color),
+         var(--label-outline-size) calc(-1 * var(--label-outline-size)) 0 var(--label-outline-color),
+        calc(-1 * var(--label-outline-size))  var(--label-outline-size) 0 var(--label-outline-color),
+         var(--label-outline-size)  var(--label-outline-size) 0 var(--label-outline-color),
+        calc(-1 * var(--label-outline-size)) 0 0 var(--label-outline-color),
+         var(--label-outline-size) 0 0 var(--label-outline-color),
+         0 calc(-1 * var(--label-outline-size)) 0 var(--label-outline-color),
+         0 var(--label-outline-size) 0 var(--label-outline-color);
+    
+    /* box variables */
+    --box-radius: 18px;
+    --box-border: 4px;
+    
+    /* assets */
+    --left-panel-background: url("assets/left_panel_background.png");
+    --middle-panel-background: url("assets/middle_panel_background.png");
+    --right-panel-background: url("assets/right_panel_background.png");
+    --logo-image: url("assets/genro_simulator_logo.png");
+}
+
+/* removing default margin; establishing font settings */
+body {
+    min-width: 985px;
+    min-height: 550px;
+
+    margin: 0;
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    color: black;
+    text-shadow: var(--text-outline);
+    overflow: hidden;        /* preventing page scroll */
+}
+
+h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* main layout settings */
+.layout {
+    display: flex;
+    height: 100vh;           /* fitting entire screen height */
+}
+
+/* base panel styling */
+.panel {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local; /* keeping background fixed within container */
+    border-image: linear-gradient(to right, #efddb2, #a58e6a) 1;
+    justify-items: center;
+    text-align: center;
+}
+
+/* left panel */
+.left-panel {
+    flex: 1;   
+    background-image: var(--left-panel-background);
+    border-right: 5px solid;
+    background-color: #000000;
+}
+
+/* middle panel */
+.middle-panel {
+    flex: 2.6;                         /* ~2.5–3x width */
+    background-image: var(--middle-panel-background);
+    border-left: 7px solid;
+    border-right: 5px solid;
+    background-color: #000000;
+}
+
+/* right panel */
+.right-panel {
+    flex: 1;
+    background-image: var(--right-panel-background);
+    border-left: 7px solid;
+    background-color: #000000;
+}
+
+/* inner content spacing */
+.panel-content {
+    padding: 12%;
+    box-sizing: content-box;
+}
+
+/* scroll behavior ONLY for the middle panel */
+.scrollable {
+    height: 100%;
+    overflow-y: scroll;   /* allow vertical scroll */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE and Edge */
+}
+.middle-panel::-webkit-scrollbar {
+    display: none;        /* Chrome, Safari, Opera */
+}
+
+
+/* inner assets (text boxes, icons, buttons, etc.) */
+
+/* game logo */
+.logo {
+    width: 100%;
+    justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 6vh;
+}
+
+/* header for panel labels */
+.header {
+    display: inline-block;       /* shrink to content width */
+    text-align: center;          /* center text inside */
+}
+.header-top {
+    font-size: 90%;           /* smaller top text */
+    font-weight: normal;
+    margin-bottom: -6%;
+}
+.header-bottom {
+    font-size: 105%;           /* larger main heading */
+    font-weight: bold;
+}
+.header-bottom-underlined {
+    font-size: 135%;           /* larger main heading */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* base box class */
+/* a little animation for ME because it's MY project */
+@keyframes slideUpFadeIn {
+    0% {
+        transform: translateY(50px);    /* start below */
+        opacity: 0;                     /* start invisible */
+    }
+    100% {
+        transform: translateY(0);       /* final position */
+        opacity: 1;                     /* fully visible */
+    }
+}
+.box {
+    position: relative;
+    border: var(--box-border) solid black;
+    border-radius: var(--box-radius);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 5%;
+}
+.box.show {
+    animation: slideUpFadeIn 0.8s ease-out forwards;
+}
+.box-content {
+    text-align: left;
+}
+.box-content .centered-content {
+    text-align: center;
+    justify-content: center;
+}
+
+/* profile image square box */
+.image-box {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+
+    border: var(--box-border) solid black;
+    border-radius: var(--box-radius);
+
+    background-color: rgba(255, 255, 255, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+.image-box img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* box with label */
+.with-label {
+    padding-top: 2.5rem; /* create room for overlap */
+}
+.box-label {
+    display: inline-flex;     /* shrink to fit content */
+    position: absolute;
+    top: calc(var(--box-border) * -8);
+    left: calc(var(--box-border) * -4); /* aligns to the left edge of parent */
+    height: max(6vh, 1vw);             /* fixed height if desired */
+    border: var(--box-border) solid black;
+    padding: 0.25rem;       /* horizontal padding */
+    white-space: nowrap;       /* prevents wrapping */
+    color: var(--label-color);
+    text-shadow: var(--label-text-outline);
+}
+.box-label-spring {
+    background-color: #ca78b0;   /* opaque */
+}
+.box-label-summer {
+    background-color: #93c47dff;   /* opaque */
+}
+.box-label-autumn {
+    background-color: #e99e48ff;   /* opaque */
+}
+.box-label-winter {
+    background-color: #9fc5e8ff;   /* opaque */
+}
+.label-left {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--label-left-font-size);
+}
+.label-right {
+    width: 66.66%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: var(--label-right-font-size);
+    text-align: left;
+}
+
+/* stat progress bar */
+.bar-container {
+    position: relative;
+    width: 100%;               /* base width */
+    height: 2.5vw;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.6); /* base box color */
+    overflow: hidden;
+}
+.bar-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-size: calc(var(--label-right-font-size) - 0.4vw);
+}
+.bar-progress {
+    position: absolute;
+    top: 0;
+    left: 0;                       /* starts exactly at the left of base */
+    height: 100%;
+    background-color: black;     /* opaque progress fill */
+    border-radius: 12px 0 0 12px;  /* round left side; right side can remain straight */
+    transition: width 0.5s ease;   /* smooth growth */
+}
+.bar-progress-industry {
+    background-color: #0b5394ff; /* opaque progress fill */
+}
+.bar-progress-military {
+    background-color: #bf9000ff; /* opaque progress fill */
+}
+.bar-progress-nationalism {
+    background-color: #a61c00ff; /* opaque progress fill */
+}
+.bar-progress-unrest {
+    background-color: #8a4f8aff; /* opaque progress fill */
+}
+
+/* labels for progress bars */
+.status-header {
+    font-size: 115%;           /* larger main heading */
+    font-weight: bold;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+}
+
+/* option selection buttons */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;          /* space between buttons */
+    flex-wrap: nowrap;   /* preventing wrapping to next line */
+    justify-content: center;  /* centering the group horizontally */
+}
+.option-button {
+    flex: 1 1 0;  /* growing/shrinking equally */
+    max-width: 200px;  /* optional cap */
+    min-width: 100px;  /* optional floor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 4px solid black;
+    background-color: black;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    color: var(--label-color);
+
+    font-family: inherit;
+    margin: auto;
+}
+.option-button.show {
+    animation: slideUpFadeIn 0.8s ease-out forwards;
+}
+.option-button .upper-text {
+    font-size: clamp(1rem, 15%, 2rem);  /* scales with button width */
+    font-weight: bold;
+}
+.option-button .lower-text {
+    font-size: clamp(0.7rem, 8%, 1.2rem);  /* slightly smaller, scales too */
+    margin-top: 0.1em;
+}
+/* .option-button:hover {
+    background-color: white;
+    color: black;
+} */
+.option-button.selected {
+    background-color: white;
+    color: black;
+    cursor: default;
+}
+.option-button.disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none; /* prevents hover/click */
+}
+.option-button:focus {
+    outline: none;
+}

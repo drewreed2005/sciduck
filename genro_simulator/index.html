@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meiji Oligarch Simulator</title>
+    <!--using Google font "New Tegomin" that I used in the wireframe layout-->
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <div class="panel left-panel">
+            <div class="panel-content">
+                <img class="logo" src="assets/genro_simulator_logo.png"></img>
+
+                <!--- scrapped user icon
+                <div id="profile-box" class="image-box">
+                    <img src="assets/profile_ito_hirobumi.jpg" alt="You">
+                </div>
+                -->
+                <div class="header">
+                    <div class="header-top">今年</div>
+                    <div class="header-bottom-underlined">CURRENT YEAR</div>
+                </div>
+                <div id="year-display" class="status-header" style="font-size: 8vh;">1870</div>
+
+                <div class="header">
+                    <div class="header-top">現在の予算</div>
+                    <div class="header-bottom">Current Budget:</div>
+                </div>
+                <div id="budget-display" class="status-header" style="font-size: 6vh;">200000¥</div>
+                <div class="header">
+                    <div class="header-top">四半期収入</div>
+                    <div class="header-bottom">Quarterly Income:</div>
+                </div>
+                <div id="income-display" class="status-header" style="font-size: 6vh;">1200¥</div>
+            </div>
+        </div>
+
+        <div class="panel middle-panel">
+            <div id="main-sim-panel" class="panel-content scrollable"></div>
+        </div>
+
+        <div class="panel right-panel">
+            <div class="panel-content">
+                <div class="header">
+                    <div class="header-top" style="margin-bottom: -16%;">ステータス</div>
+                    <div class="header-bottom-underlined" style="font-size: 155%; padding-bottom: 30px;">STATS</div>
+                </div>
+                <br>
+
+                <div class="bar-container">
+                    <div class="bar-base">工</div>
+                    <div id="industry-bar" class="bar-progress bar-progress-industry"></div>
+                </div>
+                <div class="status-header">Industry</div>
+
+                <div class="bar-container">
+                    <div class="bar-base">軍</div>
+                    <div id="military-bar" class="bar-progress bar-progress-military"></div>
+                </div>
+                <div class="status-header">Military</div>
+
+                <div class="bar-container">
+                    <div class="bar-base">皇</div>
+                    <div id="nationalism-bar" class="bar-progress bar-progress-nationalism"></div>
+                </div>
+                <div class="status-header">Nationalism</div>
+
+                <div class="bar-container">
+                    <div class="bar-base">乱</div>
+                    <div id="unrest-bar" class="bar-progress bar-progress-unrest"></div>
+                </div>
+                <div class="status-header">Unrest</div>
+                <br>
+                <button id="reset-button" class="option-button" style="font-size: 2.2vh;">Reset Simulation</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
