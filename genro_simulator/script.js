@@ -225,7 +225,7 @@ class SimState {
         const startBox = SimUI.createEventBox();
         const startBoxContent = SimUI.createBoxContent();
         const startBoxText = document.createElement("p");
-        startBoxText.innerText = "In Genrō Simulator, you take the reigns as a shishi-turned-oligarch in 1870, looking ahead at an era of modernization. Along with your fellow Dajō-kan members, it is your responsibility to make calls that further Japan's modernization efforts without stirring excessive controversy and unrest.";
+        startBoxText.innerText = "In Genrō Simulator, you take the reins as a shishi-turned-oligarch in 1870, looking ahead at an era of modernization. Along with your fellow Dajō-kan members, it is your responsibility to make calls that further Japan's modernization efforts without stirring excessive controversy.";
         const startButtonContainer = SimUI.createButtonContainer();
         const startButton = SimUI.createButtonElement("Start Simulation", SimState.INITIAL_YEAR.toString());
         startButton.onclick = () => this.startSim();
@@ -782,8 +782,8 @@ class SecondDecadeEvents {
         new SimEvent("Commission Military Propaganda", SecondDecadeEvents.Costs.LOW,
             "Despite no present conflicts, woodblock artists are commissioned to depict Emperor Meiji leading a massive army. Nationalist fervor grows and a sense of sacrificial duty to the Emperor is bolstered.",
             {
-                [Stats.MILITARY]: 30,
-                [Stats.NATIONALISM]: 20,
+                [Stats.MILITARY]: 40,
+                [Stats.NATIONALISM]: 15,
             }
         ),
         new SimEvent("Invest in Zaibatsu", SecondDecadeEvents.Costs.VERY_HIGH,
@@ -803,8 +803,8 @@ class SecondDecadeEvents {
         new SimEvent("Expand Coal Mining", SecondDecadeEvents.Costs.HIGH,
             "Coal production increases to meet the demands of factories and railways. Labor complaints and concern from locals stir unrest.",
             {
-                [Stats.INDUSTRY]: 35,
-                [Stats.MILITARY]: 10,
+                [Stats.INDUSTRY]: 40,
+                [Stats.MILITARY]: 15,
                 [Stats.UNREST]: 15
             }
         ),
@@ -816,7 +816,12 @@ class SecondDecadeEvents {
             }
         ),
         new SimEvent("Stage Yasukuni Shrine Visit", SecondDecadeEvents.Costs.MODERATE,
-            "The Emperor visits Yasukuni Shrine, in doing so reinforcing national unity under his divine self."
+            "The Emperor visits Yasukuni Shrine, in doing so reinforcing national unity under his divine self.",
+            {
+                [Stats.MILITARY]: 30,
+                [Stats.NATIONALISM]: 20,
+                [Stats.UNREST]: -20
+            }
         )
     ];
 
